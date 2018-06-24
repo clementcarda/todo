@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  h2= title
+  table(border=1)
+    tr
+      th Status
+      th message
+      th creation
+      th options
+    each todo in todos
+      tr
+        if todo.completedAt != null
+          td= 'X'
+        else
+          td= ''
+        td= todo.message
+        td= 'créé le #{todo.createdAt}'
+        td= ''

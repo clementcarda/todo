@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+  h2= title
+    form(action=action method="post")
+      input(name='message' type="text" value=todo.message placeholder="message")
+      button.btn.btn-info.btn-block.login(type="submit") Envoyer
